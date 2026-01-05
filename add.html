@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="/home">Home</a>
+    
+    <h2>Add Contact</h2>
+    
+    <img src="/static/3.jpg" width="300" alt="Contact image">
+    
+    <form method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="tel" name="phone" placeholder="Phone" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="address" placeholder="Address" required>
+        <button type="submit">Add</button>
+    </form>
+</body>
+</html>

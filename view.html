@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head><title>View Contacts</title></head>
+<body>
+
+<a href="/home">Home</a>
+
+<h2>Contact List</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Search by name">
+    <button>Search</button>
+</form>
+
+<img src="/static/2.jpg" width="300">
+
+<table border="1">
+<tr>
+    <th>No</th><th>Name</th><th>Phone</th>
+    <th>Email</th><th>Address</th>
+    <th>Edit</th><th>Delete</th>
+</tr>
+
+{% for c in data %}
+<tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ c['name'] }}</td>
+    <td>{{ c['phone'] }}</td>
+    <td>{{ c['email'] }}</td>
+    <td>{{ c['address'] }}</td>
+    <td><a href="/edit/{{ c['id'] }}">Edit</a></td>
+    <td><a href="/delete/{{ c['id'] }}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
